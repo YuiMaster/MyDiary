@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- 影响：导航栏颜色 -->
+    <color name="colorPrimary">#3C8CE7</color>
+    <!-- 影响：通知栏颜色 -->
+    <color name="colorPrimaryDark">#3C8CE7</color>
+    <!-- 影响：控件选中后颜色 -->
+    <color name="colorAccent">#5e5f64</color>
+
+    <!-- 应用主色调 -->
+    <color name="color_main_theme">@color/colorPrimary</color>
+    <!-- 应用主背景色 -->
+    <color name="color_main_bg">#F2F6F9</color>
+
+    <!-- 透明 -->
+    <color name="transparent">@android:color/transparent</color>
+
+    <!-- 基本颜色 -->
+    <color name="color_white">#ffffff</color>
+    <color name="color_red">#e22323</color>
+    <color name="color_blue">#01b4ff</color>
+    <color name="color_gray">#cccccc</color>
+    <color name="color_9d">#9d9d9d</color>
+    <color name="color_2b">#2b2b2b</color>
+    <color name="color_d8">#d8d8d8</color>
+    <color name="color_e6">#E6E6E6</color>
+
+
+    <!-- 控件基本色 -->
+    <color name="text_color">#3C3E45</color>
+    <color name="title_color">#241f1f</color>
+    <color name="hint_text_color">#5e5f64</color>
+
+    <color name="default_bg_color">#f6f6f6</color>
+
+    <!-- 下划线颜色 -->
+    <color name="color_under_line">#7F4F4848</color>
+    <color name="color_divider">#E6E6E6</color>
+    <color name="color_nav_divider">#400060CE</color>
 </resources>
