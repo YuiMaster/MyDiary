@@ -28,9 +28,40 @@ android {
         enabled true
     }
 
-    buildTypes {
+    signingConfigs {
+        debug {
+            keyAlias 'MyDialyApp'
+            keyPassword 'yui2018'
+            storeFile file('../yui.jks')
+            storePassword 'yui2018'
+        }
         release {
+            keyAlias 'MyDialyApp'
+            keyPassword 'yui2018'
+            storeFile file('../yui.jks')
+            storePassword 'yui2018'
+        }
+    }
+
+
+    buildTypes {
+        debug {
             minifyEnabled false
+            signingConfig signingConfigs.release
+            zipAlignEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            /** 是否开启混淆 */
+            minifyEnabled true
+            /** 签名 */
+            signingConfig signingConfigs.release
+            /** 是否优化apk文件，将apk文件中未压缩的数据在4个字节边界上对齐，具体见改善android性能工具：Zipalign */
+            zipAlignEnabled true
+            /** 是否去除无用资源，任何在编译过程中没有用到的资源或者代码都会被删除，可以有效减小apk体积 */
+            shrinkResources true
+            /** 指定混淆规则文件 */
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -54,6 +85,9 @@ dependencies {
     /** rxjava*/
     implementation "io.reactivex:rxjava:$rxjava_version"
     implementation "io.reactivex:rxandroid:$rxjava_version"
+
+    /** rxpermissions  */
+    implementation "com.tbruyelle.rxpermissions:rxpermissions:$rxpermissions_version"
 
     /** retrofit */
     implementation "com.squareup.retrofit2:retrofit:$retorfit_version"

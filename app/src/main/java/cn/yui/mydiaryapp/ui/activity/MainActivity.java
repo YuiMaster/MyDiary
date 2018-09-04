@@ -1,9 +1,9 @@
 package cn.yui.mydiaryapp.ui.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import cn.yui.mydiaryapp.R;
+import cn.yui.mydiaryapp.ui.base.BaseActivity;
 
 
 /**
@@ -12,7 +12,7 @@ import cn.yui.mydiaryapp.R;
  * @time 2018/9/4 0004
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,6 +10,12 @@ import android.app.Application;
  */
 
 public class NewApplication extends Application {
+    private static NewApplication instance;
+
+    public static NewApplication getInstance() {
+        return instance;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
