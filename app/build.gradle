@@ -94,4 +94,9 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-scalars:$retorfit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retorfit_version"
     implementation "com.squareup.retrofit2:adapter-rxjava:$retorfit_version"
+
+
+    /** 内存泄漏监测 */
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary_version"
 }

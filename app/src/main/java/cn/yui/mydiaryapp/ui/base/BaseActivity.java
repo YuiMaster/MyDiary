@@ -7,7 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.githang.statusbar.StatusBarCompat;
 
+import cn.yui.mydiaryapp.NewApplication;
 import cn.yui.mydiaryapp.R;
+import cn.yui.mydiaryapp.third.leaks.HuaweiLeak;
+import cn.yui.mydiaryapp.third.leaks.imm.IMMLeaks;
 
 
 /**
@@ -40,5 +43,14 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        HuaweiLeak.fixHuaWeiMemoryLeak();
+        IMMLeaks.fixFocusedViewLeak(getApplication());
+        super.onDestroy();
+        /** 监控内存泄漏 */
+        NewApplication.getRefWatcher(this).watch(this);
     }
 }
